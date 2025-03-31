@@ -16,8 +16,8 @@
 val shared = Seq(
   // Info
   organization := "com.github.asana.socko-asana-fork",
-  version      := "0.8.0",
-  crossScalaVersions := Seq("2.12.17", "2.13.10"),
+  version      := "0.8.1",
+  crossScalaVersions := Seq("2.12.20", "2.13.16"),
 
   // Repositories
   resolvers += "Typesafe Repository" at "https://repo.typesafe.com/typesafe/releases/",
