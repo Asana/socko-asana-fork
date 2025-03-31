@@ -265,7 +265,7 @@ class RequestHandler(server: WebServer, routes: PartialFunction[SockoEvent, Unit
       sf.format(Calendar.getInstance().getTime()))
 
     // Write HTTP Response
-    val bytes = s"Failure: ${status}\r\n\r\n${ex.getMessage}\r\n".getBytes(CharsetUtil.UTF_8)
+    val bytes = s"Failure: ${status}\r\n".getBytes(CharsetUtil.UTF_8)
     val content = Unpooled.wrappedBuffer(bytes)
     val response = new DefaultFullHttpResponse(HttpVersion.HTTP_1_1, status, content)
     response.headers.set(HttpHeaders.Names.CONTENT_TYPE, "text/plain; charset=UTF-8")
